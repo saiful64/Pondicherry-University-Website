@@ -1,0 +1,2062 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<!-- my script and syles goes here -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Pondicherry Univeristy - Management Information System (PU-MIS) is collection of inhouse developed software stacks namely Student Academic Management System (SAMS), Research Scholars Academic Management System (RAMS), Employee IT Assessement System (EIMS)">
+    <meta name="keywords" content="Students, Courses, Programs, Faculty, Departments, Schools, Office, HoD, Dean, Vice Chancellor, Exam Result, Research Scholars, Thesis, Ph. D, PG, Exams, Fee Payments, Admission with auto sliding, Pensioner, Income Tax, Central university">
+    <meta name="author" content="SAMS Team - Centre for Bioinformatics. Mr. M. Sundaramohan (Team Lead), Mr. E. Malanco (Software Analyst & Full Stack Developer), Mr. P. Elavarasan (Software Analyst & Full Stack Developer), Mr. S. Manikandan (Software Analyst & Full Stack Developer)">
+   
+    <title>Management Information System (PU-MIS) - Pondicherry University</title>
+    
+    <link rel="shortcut icon" href="https://sms.bicpu.edu.in/assets/images/favicon.ico" type="image/x-icon" />
+    
+    <link href="https://sms.bicpu.edu.in/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://sms.bicpu.edu.in/assets/login/login-register.css" rel="stylesheet" /> 
+    <link href="https://sms.bicpu.edu.in/assets/fontawesome/css/all.css" rel="stylesheet" >
+    <link href="https://sms.bicpu.edu.in/assets/datatables/datatables.min.css" rel="stylesheet" />
+    <link href="https://sms.bicpu.edu.in/assets/styles/animate.min.css" rel="stylesheet" />  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link href="https://sms.bicpu.edu.in/assets/retina/style.css" rel="stylesheet" />     
+    <link href="https://sms.bicpu.edu.in/assets/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <link href="https://sms.bicpu.edu.in/assets/chosen/chosen.min.css" rel="stylesheet" />     
+    <link href="https://sms.bicpu.edu.in/assets/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+     
+<script src="https://sms.bicpu.edu.in/assets/jquery/jquery-2.1.4.min.js" ></script>
+<script src="https://sms.bicpu.edu.in/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://sms.bicpu.edu.in/assets/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="https://sms.bicpu.edu.in/assets/chosen/chosen.jquery.min.js"></script>
+<script src="https://sms.bicpu.edu.in/assets/fontawesome/js/all.js"></script>
+   
+<script src="https://sms.bicpu.edu.in/assets/datatables/datatables.min.js"></script>
+
+<script src="https://sms.bicpu.edu.in/assets/retina/script.js" ></script>
+<script src="https://sms.bicpu.edu.in/assets/custom/jquery.tabledit.js"></script>
+<script src="https://sms.bicpu.edu.in/assets/custom/pace.min.js"></script>
+<script src="https://sms.bicpu.edu.in/assets/bootstrap/notify/bootstrap-notify.min.js"></script>
+<!-- Sweet Alert -->
+<script src="https://sms.bicpu.edu.in/assets/sweetalert/sweetalert.min.js"></script>
+<!-- Datetime Picker -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+</head>
+
+<body>
+        
+    
+<nav id="menu" class="open">
+    <div id="header-left">
+        <div id="header-item-pu">Pondicherry University</div>
+    </div>
+    <div id="menu-toggle" class="open" title="Pull & Push Menu" >
+    <i class="glyphicon glyphicon-menu-hamburger" style="font-size: 2em;"> </i>
+</div>
+                      
+    <div id="left-item">
+        <div class="user-logo">
+            <img class="img-rounded user-logo" src="https://sms.bicpu.edu.in/assets/images/pu-logo.png" alt="aayi"/>
+        </div>
+    </div>
+    <div class="blur-bg">
+        <img src="https://sms.bicpu.edu.in/assets/images/aayi.png" alt="aayi"/>
+    </div>
+           
+    <div id="viewport">
+        <div id="card" style="overflow:auto">
+        <!--back content start-->
+            <ul class="mainmenu" >
+
+<!-- Menu for Admin /DR Aca login  -->                
+                                                   
+                <li><span><a href="https://sms.bicpu.edu.in/student/home" class="white"><i class="glyphicon glyphicon-home"></i> Home</a></span></li>				
+                <li><span><a href="https://sms.bicpu.edu.in/student/student_course_registration" class="white"><i class="glyphicon glyphicon-book"></i> Course Registration</a></span></li>
+                <li><span><a href="#" class="white"><i class="glyphicon glyphicon-tasks"></i> Attendance & Internal Marks</a></span></li>
+                    <ul class="submenu">
+                       <!-- <li><span><a href="https://sms.bicpu.edu.in/student/attendance_internal_mark" class="white"> Current Semester</a></span></li>
+                        <li><span><a href="https://sms.bicpu.edu.in/student/old_attendance_internal_mark" class="white"> Previous Semester</a></span></li>-->
+						<li><span><a href="https://sms.bicpu.edu.in/student/attendance_internal_mark" class="white"> Courses (EVEN - 2022)</a></span></li>
+                        <li><span><a href="https://sms.bicpu.edu.in/student/old_attendance_internal_mark" class="white"> Courses (ODD - 2022)</a></span></li>
+                    </ul> 
+                                                                               
+                <li class=""><span><a href="https://sms.bicpu.edu.in/student/fee_paid_details" class="white"><i class="glyphicon glyphicon-usd"></i> Fee Paid Details</a></span></li>
+                <li><span><a href="#" class="white"><i class="glyphicon glyphicon-credit-card"></i> Online Fee Payments</a></span></li>
+                    <ul class="submenu">
+                        <li class=""><span><a href="https://sms.bicpu.edu.in/student/pay_semester_fee" class="white"> Semester Fee</a></span></li>
+                        <li class=""><span><a href="https://sms.bicpu.edu.in/student/pay_exam_fee_application" class="white"> Exam Application &amp; Fee</a></span></li>
+						<li class=""><span><a href="https://sms.bicpu.edu.in/student/pay_transport_fee" class="white">Other Fees</a></span></li>
+                    </ul>
+                <li><span><a href="https://sms.bicpu.edu.in/student/iqac_evaluation_course_list" class="white"><i class="glyphicon glyphicon-eye-open"></i> Faculty Evaluation</a></span></li>
+                <li><span><a href="https://sms.bicpu.edu.in/student/exam_hall_ticket" class="white"><i class="glyphicon glyphicon-modal-window"></i> Hall Ticket </a></span></li>
+                                <li class=""><span><a href="https://sms.bicpu.edu.in/student/tentative_examination_result" class="white"><i class="glyphicon glyphicon-stats"></i> Result (Tentative)</a></span></li>
+                
+<!-- feed form   -->
+			
+					
+<!-- Mend End for student Login -->
+
+<!-- Menu End for Assistant Academic Login  -->                
+                                      
+
+        </ul>
+<!--back content end-->
+				
+    </div>
+</div>
+           <ul>
+                <li></li>
+		<li></li>
+            </ul>			          
+</nav>
+ 
+
+
+
+
+<script>
+		
+$(document).ready(function() {
+    var active_menu = 'Home';
+    //alert(active_menu);
+    $('li').each(function() {
+        var link_text = $(this).text();
+        //alert(link_text);
+        if (link_text.includes(active_menu) ) {
+	$(this).css('backgroundColor', 'steelblue'); 
+        $(this).slideDown();
+	}
+    });
+});
+
+</script>
+     
+     <div id="container">
+     
+         <div id="content-right" class="content-right-moved">
+    
+<style>
+#header-right{
+    z-index: 100;
+	width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+  }
+</style>
+
+<div id="header-right">    
+           
+    <div id="header-item">
+            
+            
+                
+        <nav-log id="nav-3">               
+             <div id="username_head"><a class="link-3" href="https://sms.bicpu.edu.in/jsondata/faqs" >FAQs</a> | <i class="glyphicon glyphicon-user"></i> <a class="link-3" href="javascript:void(0)" onclick="view_student_details(38149)">SAIFUL ISLAM TAPADAR</a> <a class="link-3" href="https://sms.bicpu.edu.in/member/user_logout_fn"><i class="glyphicon glyphicon-off"></i> Logout</a><a class="font-button plus" text="Increase Font Size">A+</a> | <a class="font-button minus" text="Increase Font Size">A-</a><br></div>                
+            </nav-log>
+        </div>                 
+        </div>
+    
+
+<div id="content-wrapper">  
+    <div id="main-content"> 
+        
+        <div class="row">
+            <div class="col-8 col-md-8 col-lg-8 col-sm-8 col-xl-8 col-xs-8">
+                                <a class="btn btn-sm btn-info" href="https://sms.bicpu.edu.in/form/student_details_update">Student Details Update</a><img src="https://sms.bicpu.edu.in/assets/images/new.gif" alt="new"/>
+                            </div>
+            
+            <div class="col-4 col-md-4 col-lg-4 col-sm-4 col-xl-4 col-xs-4">
+                <div style="float:right;"><a class="btn btn-default" href="https://sms.bicpu.edu.in/course/courses_offered">Courses Offered</a></div>  
+                <div id="time_table" style="float:right;"><button class="btn btn-default" onclick="add_view_time_table(48)">View Time Table</button></div><div id="exam_schedule" style="float:right;"><button class="btn btn-default" onclick="add_view_exam_schedule(48)">View Exam Schedule</button></div>            </div>
+            
+        </div>
+        
+        
+        
+        <div class="row">
+            
+            <div class="col-8 col-md-8 col-lg-8 col-sm-8 col-xl-8 col-xs-8">
+                                <div class="student_home">
+                    <table class="table table-striped table-bordered ui table" width="100%" cellspacing="0" > 
+                        <tr><th colspan=2 style="text-align:center">Notifications</th></tr>
+                    
+					<!--	<tr><th colspan=2 style="text-align:center">A.	ODD SEMESTER 2021-22 </th></tr>
+                        <tr><td align=center>Description</td><td align=center>Period</td></tr>
+                        <tr><td>Last date for Course allocation and uploading Time Table by HoD</td><td>11.08.2021</td></tr>
+                        <tr><td>Registration of Courses for Students on roll (II/III/IV/V Year) & Submit cards to Office</td><td>09.08.2021 to 30.08.2021</td></tr>
+                        <tr><td>Dropping of Courses by Students on roll (II/III/IV/V Year)</td><td>30.08.2021</td></tr>
+                        <tr><td>Registration of Courses for Ist Year Students </td><td>08.11.2021</td></tr>
+                        <tr><td>Dropping of Courses by Ist Year Students</td><td>Will be intimated later</td></tr>
+                        <tr><td>Last Date for payment of Fee# </td><td>13.09.2021</td></tr>
+                        <tr><td>Verification of Registration by the Department Office and Submission of Consolidated Registration List to the Academic Section</td><td>Before 07.09.2021</td></tr>
+					-->
+                        <!--<tr><th colspan=2 style="text-align:center">Notifications</th></tr>
+                        <tr><th colspan=2 style="text-align:center">B.	ODD SEMESTER 2019-20 24.06.2019 TO 06.12.2019</th></tr>
+                        <tr><td align=center>Description</td><td align=center>Period</td></tr>
+                        <tr><td>Last date for uploading Course allocation and Time Table by HoD</td><td>20.06.2019</td></tr>
+                        <tr><td>Registration of Courses for Students on roll (II/III/IV/V Year) & Submit cards to Office</td><td>24.06.2019 to 28.06.2019</td></tr>
+                        <tr><td>Dropping of Courses by Students on roll (II/III/IV/V Year)</td><td>15.07.2019</td></tr>
+                        <tr><td>Registration of Courses for Ist Year Students & Submit cards to Office</td><td>01.07.2019 to 20.07.2019</td></tr>
+                        <tr><td>Dropping of Courses by Ist Year Students</td><td>30.07.2019</td></tr>
+                        <tr><td>Last Date for payment of Fee# </td><td>12.07.2019</td></tr>
+                        <tr><td>Verification of Registration by the Department Office and Submission of Consolidated Registration List to the Academic Section</td><td>Before 05.08.2019</td></tr>
+                        <tr><td>Entry of 1st Internal Test Marks by Faculty</td><td>27.07.2019</td></tr>
+                        <tr><td>Entry of 2nd Internal Test Marks by Faculty</td><td>31.10.2019</td></tr>
+                        <tr><td>Last Date for payment of Exam Fee </td><td>01.11.2019</td></tr>
+                        <tr><td>Payment of Exam Fee with Fine</td><td>02.11.2019 onwards</td></tr>
+                        <tr><td>Students Evaluation of Teachers</td><td>01.11.2019 to 10.11.2019</td></tr>
+                        <tr><td>Download & Print Hall Ticket</td><td>13.11.2019 Onwards</td></tr>
+                        <tr><td>Department / Centre to download & Print Attendance for each course</td><td>13.11.2019 onwards</td></tr>
+                        <tr><td>Internal Marks Entry (Out of 40)</td><td>13.11.2019</td></tr>
+                        <tr><td>Last Date for Attendance Entry </td><td>13.11.2019</td></tr>
+                        <tr><td>End of Classes</td><td>13.11.2019</td></tr>
+                        <tr><td>Commencement of Examinations</td><td>18.11.2019</td></tr>
+                        <tr><td>P.C. Meeting and Declaration of Provisional Results </td><td>02.12.2019 – 06.12.2019</td></tr>
+                        <tr><td colspan=2 style="text-align:center">HOD to lock the system. Marks & Grades can be changed with the HoD’s Permission.</td></tr>
+                        <tr><td>HoD forward results (Signed, consolidated Grade Sheets) to the Dean Soft copy of all results forwarded to Dean </td><td>13.12.2019</td></tr>
+                        <tr><td>Dean forward’s the results to the Registrar office (Academic Section) both through SAMS & Hard copy.</td><td>18.12.2019 onwards</td></tr>
+                        <tr><th colspan=2 style="text-align:center">B. EVEN SEMESTER 2019-20 02.12.2019 TO 04.05.2020</th></tr>
+                        <tr><td align=center>Description</td><td align=center>Period</td></tr>
+                        <tr><td>Last date for uploading Course allocation and Time Table by HoD</td><td>29.11.2019</td></tr>
+                        <tr><td>Registration of Courses by Students & Submit cards to Office</td><td>30.11.2019 to 06.12.2019 </td></tr>
+                        <tr><td>Dropping of Courses by Students</td><td>20.12.2019</td></tr>
+                        <tr><td>Last date of Payment of fees#</td><td>16.12.2019</td></tr>
+                        <tr><td>Verification of Registration by the Department Office</td><td>Before 27.12.2019</td></tr>
+                        <tr><td>Verification of Registration by the Department Office and Submission of Consolidated Registration List to the Academic Section</td><td>Before 27.12.2019</td></tr>
+                        <tr><td>Entry of 1st Internal Test Marks by Faculty</td><td>28.02.2020</td></tr>
+                        <tr><td>Entry of 2nd Internal Test Marks by Faculty</td><td>01.04.2020</td></tr>
+                        <tr><td>Last Date for payment of Exam Fee </td><td>08.04.2020</td></tr>
+                        <tr><td>Payment of Exam Fee with Fine</td><td>09.04.2020 onwards</td></tr>
+                        <tr><td>Students Evaluation of Teachers</td><td>06.04.2020 to 15.04.2020</td></tr>
+                        <tr><td>Download & Print Hall Ticket</td><td>17.04.2020 Onwards</td></tr>
+                        <tr><td>Department / Centre to download & Print Attendance for each course</td><td>17.04.2020 onwards</td></tr>
+                        <tr><td>Internal Marks Entry (Out of 40)</td><td>17.04.2020</td></tr>
+                        <tr><td>Last Date for Attendance Entry </td><td>17.04.2020</td></tr>
+                        <tr><td>End of Classes</td><td>17.04.2020</td></tr>
+                        <tr><td>Commencement of Examinations</td><td>20.04.2020</td></tr>
+                        <tr><td>P.C. Meeting and Declaration of Provisional Results </td><td>04.05.2020 to 08.05.2020</td></tr>
+                        <tr><td colspan=2 style="text-align:center">HOD to lock the system. Marks & Grades can be changed with the HoD’s Permission.</td></tr>
+                        <tr><td>HoD forward results (Signed, consolidated Grade Sheets) to the Dean Soft copy of all results forwarded to Dean </td><td>15.05.2020</td></tr>
+                        <tr><td>Dean forward’s the results to the Registrar office (Academic Section) both through SAMS & Hard copy.</td><td>21.05.2020 onwards</td></tr>
+                        <tr><td colspan=2 style="color:red"># If not paid by the last date, fine to be paid @ Rs.5/- per day for the first 10 days, Rs.10/- per day thereafter up to the last day of the month in which the fees due. After that the readmission fees of Rs.1000/- plus UDF Rs.500/- are to be paid along with the fee arrears with fine. Readmission will require Vice-Chancellor’s approval.</td></tr>
+                        -->
+                    </table>
+
+
+                                    </div>
+            </div>
+            
+            
+            
+            <div class="col-4 col-md-4 col-lg-4 col-sm-4 col-xl-4 col-xs-4">
+                                <div>
+                <!--<marquee style="height:100px;color:red" onmouseover="this.stop();" onmouseout="this.start();"><h5><a href="http://www.pondiuni.edu.in/sites/default/files/ExamPostpone09042020.pdf" target="_blank" style="color:red">All theory and practical examinations scheduled by University departments/centres and payment of examination fees are postponed till further orders.<img src="https://sms.bicpu.edu.in/assets/images/new.gif" alt="new"/></h5></a></marquee>-->
+                <!--<marquee style="height:100px;color:red" onmouseover="this.stop();" onmouseout="this.start();"><a target="_blank" style="color:red;" href="https://sms.bicpu.edu.in/assets/images/fee_revision_pg.pdf"><h5>Revised fee for ODD semester of Academic Year 2020-21</a><img src="https://sms.bicpu.edu.in/assets/images/new.gif" alt="new"/></h5></marquee>-->
+                </div>	
+                <div class="message_board">
+                    <div class="message_board_title">Message Board</div>
+                        <marquee scrollamount=3 behavior="scroll" direction="up" onmouseover="this.stop();" onmouseout="this.start();">
+                            <ul class="list-group message_board_item_ul">
+                                <li class="list-group-item-info message_board_item"> <a href="javascript:void(0)" onclick="modal_view_campus_connect()"><strong>PU Campus Connect WiFi </strong> <br>Instructions and Voucher PIN is here.</a> If any problem related to WiFi or PIN contact Computer Centre, Administration Block</li>
+												<!--<img src="https://sms.bicpu.edu.in/assets/images/new.gif" alt="new"/>
+                                                <!--<li class="list-group-item-danger message_board_item"><a target="_blank" href="https://www.pondiuni.edu.in/university_news/enrolment-for-two-moocs-by-emrc-pondicherry-university-has-begun-on-swayam/">Enrolment for two MOOCs by EMRC Pondicherry University has begun on SWAYAM</a>-->
+												<!--<li class="list-group-item-danger message_board_item"><a target="_blank" href="https://onlinecourses.swayam2.ac.in/cec22_ge42/preview">Enrolment for MOOCs course Photojournalism by EMRC Pondicherry University has begun on SWAYAM</a>
+												<li class="list-group-item-danger message_board_item"><a target="_blank" href="https://onlinecourses.swayam2.ac.in/cec22_ge45/preview">Enrolment for MOOCs course Media Laws and Ethics by EMRC Pondicherry University has begun on SWAYAM</a>-->
+												<li class="list-group-item-danger message_board_item"><a target="_blank" href="https://sms.bicpu.edu.in/assets/images/cecmooc.pdf">Enrolment for CEC MOOCs has begun on SWAYAM</a>
+                                                <li class="list-group-item-warning message_board_item"><a target="_blank" href="https://backup.pondiuni.edu.in/news/guidelines-registration-courses-sams-portal">Guidelines for Registration of Courses in SAMS Portal</a><img src="https://sms.bicpu.edu.in/assets/images/new.gif" alt="new"/>
+                                <li class="list-group-item-warning message_board_item"><a target="_blank" href="https://backup.pondiuni.edu.in/sites/default/files/SWAYAM%20Course%20Registration%20%20Guidelines-04122019.pdf">SWAYAM / MOOC / Online Course Registration - Guidelines.</a>
+                                <li class="list-group-item-warning message_board_item">Students are requested to update mobile number and email id in SAMS immediately. If already updated, ignore this message.
+                            <br>
+                            </ul>
+                        </marquee>
+                </div>
+                            </div>
+        </div>
+	
+<br><br>
+
+
+    </div>
+
+</div>
+
+
+
+ <style type="text/css">
+
+marquee{
+  height:330px;                              
+}                            
+.message_board{
+float:right;
+padding:10px;
+height:400px;
+margin-left: auto;
+border-radius: 20px;
+border: 1px solid #dddddd;
+
+}
+.message_board_title{
+margin-bottom: 10px;
+text-shadow:1px 1px 2px rgba(94,94,94,0.8);
+font-weight:bold;
+color:#FF54AF;
+font-size:16px;text-align:left;
+}
+.message_board_item{
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+border: 1px solid #dddddd;
+-webkit-box-shadow: #B3B3B3 7px 7px 7px;
+-moz-box-shadow: #B3B3B3 7px 7px 7px; 
+box-shadow: #B3B3B3 7px 7px 7px;    
+padding: 5px;
+}
+.message_board_item_ul{
+    padding-right: 10px;
+}
+</style>   
+<script type="text/javascript">
+
+    $(window).on('load',function(){
+
+//datepicker
+    $('.datepicker').datepicker({
+        autoclose: true,
+        format: "yyyy-mm-dd",
+        todayHighlight: true,
+        orientation: "top auto",
+        todayBtn: true,
+        todayHighlight: true,  
+    });
+
+
+//First time update student information
+
+    $('.form-group').removeClass('has-error'); // clear error class
+    $('.help-block').empty(); // clear error string
+    //Ajax Load data from ajax
+    
+    var data ={"id":"38149","name":"SAIFUL ISLAM TAPADAR","reg_id":"PUM22034867","app_no":"10203671","lib_id":"0","dob":"1999-04-30","pumail":"22352055@pondiuni.ac.in","email":"saifulislam778866@gmail.com","mobile":"6000129587","role":"5","program_type":"1","fee_type":"6","program_code":"352","reg_number":"22352055","year_joined":"2022","program_id":"231","dept_id":"48","school_id":"5","password":"$2y$10$wboJfdK4sf37TRhSnCtEM.om\/qnzMEYcmBr5ihkS8vckxLEl01\/Sy","finalized":"0","created":"2022-12-26 13:24:00","date_modified":"2023-04-06 14:38:30","modified":"2023-05-25 20:33:31","locked":"0","password_reset":"0","status":"1","student_type":"0","oauth_uid":"106802151714148071340","oauth_provider":"google","gpicture":"https:\/\/lh3.googleusercontent.com\/a\/AAcHTtcuL4xFKZgUP8TYXMS_e7tGL5zGgvuONgWwB1Gwkw=s96-c","s_id":"42817","student_id":"38149","full_name":"SAIFUL ISLAM TAPADAR","category":"GEN","admitted_category":"GENERAL","email_old":null,"personal_email":"saifulislam778866@gmail.com","alt_email":"","religion":"Islam","mobile_alt":"6000129587","gender":"M","address":"Kamalapara, Badarpur","pincode":"788806","city":"Badarpur","state":"Assam","geocode":"","ssc_subjects":"\"HINDI, English, Maths, Science, Social Science\"","ssc_rollno":"","ssc_board":"CBSE","ssc_year":"2015","ssc_marks":"79.8","hsc_subjects":"\"PCM, English, CS\"","hsc_rollno":"","hsc_board":"CBSE","hsc_year":"2017","hsc_marks":"76.6","degree1":"","degree1_subjects":"Other","degree1_rollno":"","degree1_board":"\"CCSA, DIBRUGARH UNIVERSITY\"","degree1_year":"2020","degree1_marks":"81.8","degree2":"","degree2_subjects":"","degree2_rollno":"","degree2_board":"","degree2_year":"","degree2_marks":"","degree2_college":"","degree2_convocation":"","nationality":"Indian","aadhar":"260997084758","blood_group":"O+","library_no":"S58706","father_name":"TAIBUR RAHAMAN TAPADAR","mother_name":"FORHANA BEGUM TAPADAR","father_mobile":"7666642343","father_email":null,"income":"0","single_girl":null,"disability":"N","joined_year":"2022","session":"1","hosteler":"Y","photo":".\/uploads\/student\/2022\/50554d3232303334383637.png","signature":".\/uploads\/student\/signature\/2022\/50554d3232303334383637.jpeg","voucher":"fx7dgc","old_mobile":null,"defence":"No","native_py":"No","entrance_rank":"87","entrance_score":"209","family_income":"Not Applicable","date_admission":"2022-12-06 12:47:00","nodue_hostel":"0","hostel_remarks":"","nodue_library":"0","library_remarks":"","nodue_dept":"0","dept_remarks":"","course_completion":"0","readmission":"0","consolidated_folio":"0","provisional_folio":"","provisional_issue_date":"","degree_folio":"0","phd_type":"0","jrf":"","account_holder_name":"","bank_name":"","account_number":"","ifsc_code":"","bank_passbook":"","bank_details_verification":"0","program_name":"MASTER OF COMPUTER APPLICATIONS","exit_program_name":null,"dept_name":"DEPARTMENT OF COMPUTER SCIENCE","school_name":"SCHOOL OF ENGINEERING & TECHNOLOGY"};
+    //alert(data.name);
+    
+    $('[name="id"]').val(data.id);
+            $('[name="student_id"]').val(data.id);
+            
+            $(".card-title").html(data.name);
+
+            $("#student_photo").attr("src", "https://sms.bicpu.edu.in/"+data.photo);
+            $("#student_photo_bg").attr("src", "https://sms.bicpu.edu.in/"+data.photo);
+
+            $("#student_details_name").html(data.name);
+            $("#student_details_reg_number").html(data.reg_number);
+
+            $("#student_details_library_no").html(data.library_no ); 
+            $("#student_details_aadhar").html(data.aadhar);
+            $("#student_photo_uploader").hide();
+
+            $("#student_details_dob").html(data.dob);
+            $("#student_details_program").html(data.program_name);
+            $("#student_details_dept").html(data.dept_name);
+            $("#student_details_year_joined").html(data.year_joined);
+            $("#student_details_father_name").html(data.father_name);
+            $("#student_details_mobile").html(data.mobile);
+            $("#student_details_pumail").html(data.pumail);
+            $("#student_details_email").html(data.email);
+            $("#student_details_address").html(data.address);
+            $("#student_details_state").html(data.state);
+            
+            $('[name="std_info_id"]').val(data.id);
+            $('[name="std_info_gender"]').val(data.gender);
+            $('[name="std_info_dob"]').datepicker('update',data.dob);
+            $('[name="std_info_category"]').val(data.category);
+            $('[name="std_info_father_name"]').val(data.father_name);
+            $('[name="std_info_mother_name"]').val(data.mother_name);
+            $('[name="std_info_mobile"]').val(data.mobile);
+            $('[name="std_info_email"]').val(data.email);
+            $('[name="std_info_father_mobile"]').val(data.father_mobile);
+            $('[name="std_info_aadhar"]').val(data.aadhar);
+            $('[name="std_info_income"]').val(data.income);
+            $('[name="std_info_library_no"]').val(data.library_no);
+            $('[name="std_info_address"]').val(data.address);
+            
+            $('[name="std_info_library_no"]').attr('disabled', 'disabled')
+            
+            if(data.year_joined >2016){
+                $("[name^=std_info_]").each(function(){
+            var value=$(this).val();
+            if( value !=""){
+                //$(this).attr('readonly', 'true');
+                //$(this).attr('disabled', 'disabled');
+            }
+            });
+            }
+    /*
+    $.ajax({
+        url : BASE_URL+"student/get_student_information_tab_fn/",
+        type: "GET",
+        dataType: "JSON",
+        data:{'id':},
+        success: function(data)
+        {
+          */              //
+            //$('[name="std_info_password"]').val(data.password);
+            //$('[name="std_info_re_password"]').val(data.password);
+            if(data.single_girl!='' || data.single_girl != null){
+            $(':radio[name="std_info_single_girl"][value="'+data.single_girl+'"]').prop('checked', true);
+             }
+            /*if(data.disability){
+            $(':radio[name="std_info_disability"][value="'+data.disability+'"]').prop('checked', true);
+             }*/
+             if(data.hosteler){
+            $(':radio[name="std_info_hosteler"][value="'+data.hosteler+'"]').prop('checked', true);
+             }
+             var flag=0;
+             if(data.gender=='M'){
+                 $('#single_girl_child').attr('hidden', 'true');
+             }
+             else{
+                 if(data.single_girl==""){
+                     flag=1;
+                 }
+             }
+            $("[name^=std_info_]").each(function(){
+            var value=$(this).val();
+            if( value ==""){
+                flag=1;
+                //alert($(this).attr('name'));
+            }
+            });
+            if(data.gender=="" || data.disability=="" || data.category==""){
+                flag=1;
+            }
+
+            
+            if(data.password_reset==1){
+                $('#modal_form_student_password').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                        });
+                $('#modal_form_student_password').modal('show');
+            }
+            else{
+             if(flag==1){
+                 //$('#modal_student_details').modal({
+                    //backdrop: 'static',
+                    //keyboard: false
+                        //});
+            //$('#modal_student_details').modal('show'); // show bootstrap modal when complete loaded
+            }
+        }
+
+        /*},
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('E0001:Error in geting data');
+        }
+    });
+  */
+    });
+
+</script>
+
+    
+<script>
+
+/*
+function view_profile_information(){
+    $('#modal_form_StudentInfo').modal('show');
+}
+
+*/
+
+//This function is to load tab control of student details
+       
+
+
+function modal_view_campus_connect(){
+
+//Ajax Load data from ajax
+    $.ajax({
+        url:"https://sms.bicpu.edu.in/student/get_campus_connect_voucher_fn/",
+        type: "GET",
+        dataType: "JSON",
+        success: function(data)
+        {    
+           $("#student_info_cc_voucher").html(data.voucher);
+           $("#student_info_reg_mobileno").html(data.mobile);
+           $('#modal_campus_connect').modal('show');  // show bootstrap modal when complete loaded
+
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('E0002:Error in geting data');
+        }
+    });
+
+}
+</script>
+
+
+
+
+
+
+
+<!-- Bootstrap modal form for PU Campus Connect -->
+<div class="modal fade" id="modal_campus_connect" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h3 class="modal-title">PU Campus Connect WiFi - Instructions</h3> 
+                
+            </div>
+            <div class="modal-body form">
+                <form action="#" id="form_campus_connect_instruction" class="form-horizontal">
+                    <div class="form-body">
+                        
+                          <div id="student_info_campus_connect_instructions">
+                              <strong>The process of connecting to CAMPUS CONNECT Wi-Fi is given below:</strong><br/>
+                              <ol>                                 
+<li>Enable Wi-Fi in your Laptop/Smart phone/any other hand held device, etc.</li>
+<li>Connect your device to Campus Connect.</li>
+<li>Enter the Registered mobile number and Voucher PIN received from SAMS.</li>
+<li>OTP will be generated and sent to your registered Mobile.</li>
+<li>Enter the 4 digit OTP number in the next page.</li>
+<li>After submission, password will be sent to your registered Mobile number.</li>
+<ul>
+ <li>a. For Students - the userid will be your Register Number.</li>
+ <li>b. For faculty/Officers/Staff - the userid will be your Employee Code</li>
+</ul>
+<li>Enter Userid and Password and start surf. </li>
+
+</ol>
+For any problems during the above steps from 3 to 6, kindly contact <br/>
+<strong>Mr. Ranjith, Wipro Engineer Mobile: 0-84 89 66 4400</strong>
+<br/><br/>  
+                              
+                          </div>    
+                        
+                        
+                        <table class="table table-striped table-bordered" cellspacing="0" width="100%" id="table_campus_connect_pin">
+                            <tr>
+                                <td>PU Campus Connect OTP will be sent to following Registered Mobile Number (If any changes in mobile number, update mobile number in SAMS and contact Mr. Ranjith)</td><td id="student_info_reg_mobileno"></td>
+                            </tr>
+                            <tr>
+                                <td>Voucher PIN</td><td id="student_info_cc_voucher"></td>
+                            </tr>  
+                            </table>
+                    </div>
+                </form>
+             
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- End Bootstrap modal -->
+
+
+
+
+
+
+<script> 
+    /*
+var notify =$.notify(
+    {
+    title: '<strong>Campus Connect Wifi !!! </strong>',
+    message: '<br>1. Students are requested to update mobile number and email id in SAMS immediately using profile update link. </br>',
+    },
+    {
+        type:'info',
+	offset: {
+		x: 50,
+		y: 100
+	},
+        delay: 40000,
+        animate: {
+		enter: 'animated fadeInDown',
+		exit: 'animated fadeOutUp'
+	},
+        placement: {
+		from: "bottom",
+		align: "right"
+	},
+    }
+);
+*/
+   
+</script>
+         
+         
+         <script src="https://accounts.google.com/gsi/client" async defer></script>
+ 
+    </div>
+    
+    <div class="footer">
+    <a  id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+    <div style="text-align:center;">
+        Copyright 2017-18 © <b>Pondicherry University </b> ***
+        Browser Preference - Chrome ***
+        Help Line <b>(2654-876, 2654-524)</b> / Feedbacks &amp; Queries mail to <b>sams@pondiuni.ac.in</b>
+	</div>
+    
+    <div style="text-align:center;">
+        <a href="https://sms.bicpu.edu.in/home/privacy_policy">Privacy Policy</a> | <a href="https://www.youtube.com/watch?v=rLqZtszcnvw">How to Use (Youtube video)</a>
+    </div>
+    </div>
+
+      
+
+    
+     
+
+<!-- Bootstrap modal for user login -->
+<div class="modal fade login" id="login_modal">
+    <div class="modal-dialog login animated">                
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Login</h4>
+    </div>
+        <div class="modal-body">  
+            <div class="box">
+            <div class="content">
+          
+                <div class="error"></div>
+                    <div class="form staff_login_box">
+                        <form id="user_login_form" method="post" action="" accept-charset="UTF-8">
+                        <input id="txt_username" class="form-control" type="text" placeholder="Username" name="txt_username" autofocus>
+                        <input id="txt_password" class="form-control" type="password" placeholder="Password" name="txt_password">
+                                           
+                        <input class="btn btn-default btn-login" id="btn_user_login" name="btn_staff_login" type="submit" value="Login">
+                        </form>
+                    </div>
+            </div>
+            </div>
+            
+            <div class="box">
+                <div class="content student_login_box" style="display:none;">
+                <div class="form">
+                <form id="student_login_form" method="post" action="" accept-charset="UTF-8">
+                <input id="reg_number" class="form-control" type="text" placeholder="Register Number" name="txt_regnumber">
+                <input id="reg_password" class="form-control" type="password" placeholder="Password" name="txt_password">
+                <input id="reg_secret" class="form-control secret" type="password" placeholder="Secret" name="txt_secret">
+                <input autofocus class="btn btn-default btn-register student_login" id="btn_student_login" type="submit" name="btn_student_login" value="Login">
+                <input autofocus class="btn btn-default btn-register student_login_admin" id="btn_student_login_admin" type="submit" name="btn_student_login_admin" value="Login" onclick="ajax_process_student_login_admin()">
+                </form>
+                                 
+                <br><i class="glyphicon glyphicon-info-sign"></i> <strong>Password: </strong>If password does not match, please contact office to generate temporary password for your login.
+                </div>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="content staff_forgot" style="display:none;">
+                <div class="form">
+                <form  method="post" action="" accept-charset="UTF-8">
+		<input id="mobile_username" class="form-control" type="text" placeholder="Username" name="txt_username" autofocus>
+                <input id="mobile" class="form-control" type="text" placeholder="Email" name="txt_mobilenumber">                                                              
+                <input class="btn btn-default btn-login" type="button" name="btn_send_password" value="Send Password" onclick="ajax_process_forgot()">
+		</form>                            
+                <i class="glyphicon glyphicon-info-sign"></i> <strong>Password will be sent to the registered e-mail </strong>
+                </div>
+                </div>
+            </div>
+            
+            <div class="box">
+            <div class="content student_forgot" style="display:none;">
+            <div class="form">
+            <form method="post" action="" accept-charset="UTF-8">
+                <input id="student_username" class="form-control" type="text" placeholder="Register Number" name="student_username" autofocus>
+                <input id="student_mobile" class="form-control" type="text" placeholder="Email" name="student_mobilenumber">                                                              
+                <input class="btn btn-default btn-login" type="button" name="btn_send_password" value="Send Password" onclick="ajax_process_forgot_student()">
+            </form>                            
+            <i class="glyphicon glyphicon-info-sign"></i> <strong>Password will be sent to the registered e-mail </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot staff_footer">
+                        <span><a href="javascript: show_password_forgot_form();">Forgot Password</a></span></br>
+			<span><a href="javascript: show_student_login_form();">Click here for Student Login</a></span>
+                        
+                        <br><br>OR
+                        <br><br>
+                        <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=offline&client_id=204268425511-ih9sk1it43u9h5isj8n8r1m0utbjt1jo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fsms.bicpu.edu.in%2Fmember%2Fgoogle_login&state&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20openid&include_granted_scopes=true&login_hint=yourmailid%40pondiuni.ac.in&prompt=select_account" title="Use your registered email id to login (Ex: gmail.com or pondiuni.ac.in or bicpu.edu.in)."><img src="https://sms.bicpu.edu.in/assets/images/glogin.png" height="50px" width="250px"/></a>
+                        
+                        </div>
+                        <div class="forgot student_footer">
+			<span><a href="javascript: show_password_forgot_form_student();">Forgot Password</a></span></br>
+			<span><a href="javascript: show_staff_login_form();">Click here for Staff Login</a></span>
+                        <br><br>OR
+                        <br><br>
+                        <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=offline&client_id=204268425511-ih9sk1it43u9h5isj8n8r1m0utbjt1jo.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fsms.bicpu.edu.in%2Fmember%2Fgoogle_login&state&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%20openid&include_granted_scopes=true&login_hint=yourmailid%40pondiuni.ac.in&prompt=select_account" title="Use your registered email id to login (Ex: gmail.com or pondiuni.ac.in or bicpu.edu.in)."><img src="https://sms.bicpu.edu.in/assets/images/glogin.png" height="50px" width="250px"/></a>
+                        </div>
+                    </div>        
+    		      </div>
+		      </div>
+		  </div>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- Bootstrap modal form for uploading or viewing time table -->
+<div class="modal fade" id="modal_view_time_table" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Time Table</h3>
+            </div>
+            <div class="modal-body form">
+                <form action="#" id="form_add_view_time_table" class="form-horizontal">
+                                <div class="form-group">
+                            <div class="col-md-9">
+                                
+                                <select id="select_dept_timetable">
+                                    <option value="">--Select Dept--</option>
+                                     <option value="9">CENTRE FOR ADULT & CONTINUING EDUCATION</option> <option value="50">CENTRE FOR EUROPEAN STUDIES</option> <option value="20">CENTRE FOR FOREIGN LANGUAGES </option> <option value="104">CENTRE FOR MARITIME STUDIES</option> <option value="46">CENTRE FOR NANO SCIENCES & TECHNOLOGY</option> <option value="43">CENTRE FOR POLLUTION CONTROL & ENVIRONMENTAL ENGINEERING</option> <option value="26">CENTRE FOR STUDY OF SOCIAL EXCLUSION & INCLUSIVE POLICY</option> <option value="42">CENTRE FOR WOMENS STUDIES</option> <option value="21">DEPARTMENT OF ANTHROPOLOGY</option> <option value="40">DEPARTMENT OF APPLIED PSYCHOLOGY</option> <option value="6">DEPARTMENT OF BANKING TECHNOLOGY</option> <option value="29">DEPARTMENT OF BIOCHEMISTRY & MOLECULAR BIOLOGY</option> <option value="33">DEPARTMENT OF BIOINFORMATICS</option> <option value="28">DEPARTMENT OF BIOTECHNOLOGY</option> <option value="56">DEPARTMENT OF CHEMISTRY</option> <option value="44">DEPARTMENT OF COASTAL DISASTER MANAGEMENT(A&N CAMPUS)</option> <option value="8">DEPARTMENT OF COMMERCE</option> <option value="17">DEPARTMENT OF COMMERCE - KARAIKAL CAMPUS</option> <option value="48">DEPARTMENT OF COMPUTER SCIENCE</option> <option value="19">DEPARTMENT OF COMPUTER SCIENCE- KARAIKAL CAMPUS</option> <option value="61">DEPARTMENT OF EARTH SCIENCES</option> <option value="71">DEPARTMENT OF ECOLOGY & ENVIRONMENTAL SCIENCES</option> <option value="7">DEPARTMENT OF ECONOMICS</option> <option value="25">DEPARTMENT OF ELECTRONIC MEDIA & MASS COMMUNICATION</option> <option value="72">DEPARTMENT OF ELECTRONICS ENGINEERING</option> <option value="11">DEPARTMENT OF ENGLISH</option> <option value="30">DEPARTMENT OF FOOD SCIENCE & TECHNOLOGY</option> <option value="12">DEPARTMENT OF FRENCH</option> <option value="24">DEPARTMENT OF GREEN ENERGY TECHNOLOGY</option> <option value="14">DEPARTMENT OF HINDI</option> <option value="34">DEPARTMENT OF HISTORY</option> <option value="3">DEPARTMENT OF INTERNATIONAL BUSINESS</option> <option value="32">DEPARTMENT OF LIBRARY & INFORMATION SCIENCE</option> <option value="1">DEPARTMENT OF MANAGEMENT STUDIES</option> <option value="142">DEPARTMENT OF MANAGEMENT STUDIES - ANDAMAN CAMPUS</option> <option value="5">DEPARTMENT OF MANAGEMENT STUDIES - KARAIKAL CAMPUS</option> <option value="57">DEPARTMENT OF MATHEMATICS</option> <option value="67">DEPARTMENT OF MICROBIOLOGY</option> <option value="65">DEPARTMENT OF OCEAN STUDIES AND MARINE BIOLOGY(A&N CAMPUS)</option> <option value="23">DEPARTMENT OF PERFORMING ARTS</option> <option value="16">DEPARTMENT OF PHILOSOPHY</option> <option value="15">DEPARTMENT OF PHYSICAL EDUCATION AND SPORTS</option> <option value="18">DEPARTMENT OF PHYSICS</option> <option value="55">DEPARTMENT OF POLITICS & INTERNATIONAL STUDIES</option> <option value="13">DEPARTMENT OF SANSKRIT</option> <option value="35">DEPARTMENT OF SOCIAL WORK</option> <option value="22">DEPARTMENT OF SOCIOLOGY</option> <option value="31">DEPARTMENT OF STATISTICS</option> <option value="4">DEPARTMENT OF TOURISM STUDIES</option> <option value="101">ESCANDE CHAIR IN ASIAN CHRISTIAN STUDIES</option> <option value="108">MOU SEAL PROGRAMME</option> <option value="78">SCHOOL OF EDUCATION</option> <option value="77">SCHOOL OF LAW</option> <option value="76">SCHOOL OF TAMIL</option> <option value="41">UMISARC - CENTRE FOR SOUTH ASIAN STUDIES</option>                                    
+                                    </select>
+
+               
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            
+                            <div id="div_timetable" style="padding:10px;">
+                                
+                            </div>
+                        </div>
+
+                    </form>
+                    </div>
+                
+            
+              <div class="modal-footer">
+                
+               
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+            </div>
+    
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+<!-- End Bootstrap modal -->
+
+
+<!-- Bootstrap modal form for uploading or viewing exam schedulee -->
+<div class="modal fade" id="modal_view_exam_schedule" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Exam Schedule</h3>
+            </div>
+            <div class="modal-body form">
+                <form action="#" id="form_add_view_exam_schedule" class="form-horizontal">
+                                <div class="form-group">
+                            <div class="col-md-9">
+                                
+                                <select id="select_dept_exam_schedule">
+                                    <option value="">--Select Dept--</option>
+                                     <option value="9">CENTRE FOR ADULT & CONTINUING EDUCATION</option> <option value="50">CENTRE FOR EUROPEAN STUDIES</option> <option value="20">CENTRE FOR FOREIGN LANGUAGES </option> <option value="104">CENTRE FOR MARITIME STUDIES</option> <option value="46">CENTRE FOR NANO SCIENCES & TECHNOLOGY</option> <option value="43">CENTRE FOR POLLUTION CONTROL & ENVIRONMENTAL ENGINEERING</option> <option value="26">CENTRE FOR STUDY OF SOCIAL EXCLUSION & INCLUSIVE POLICY</option> <option value="42">CENTRE FOR WOMENS STUDIES</option> <option value="21">DEPARTMENT OF ANTHROPOLOGY</option> <option value="40">DEPARTMENT OF APPLIED PSYCHOLOGY</option> <option value="6">DEPARTMENT OF BANKING TECHNOLOGY</option> <option value="29">DEPARTMENT OF BIOCHEMISTRY & MOLECULAR BIOLOGY</option> <option value="33">DEPARTMENT OF BIOINFORMATICS</option> <option value="28">DEPARTMENT OF BIOTECHNOLOGY</option> <option value="56">DEPARTMENT OF CHEMISTRY</option> <option value="44">DEPARTMENT OF COASTAL DISASTER MANAGEMENT(A&N CAMPUS)</option> <option value="8">DEPARTMENT OF COMMERCE</option> <option value="17">DEPARTMENT OF COMMERCE - KARAIKAL CAMPUS</option> <option value="48">DEPARTMENT OF COMPUTER SCIENCE</option> <option value="19">DEPARTMENT OF COMPUTER SCIENCE- KARAIKAL CAMPUS</option> <option value="61">DEPARTMENT OF EARTH SCIENCES</option> <option value="71">DEPARTMENT OF ECOLOGY & ENVIRONMENTAL SCIENCES</option> <option value="7">DEPARTMENT OF ECONOMICS</option> <option value="25">DEPARTMENT OF ELECTRONIC MEDIA & MASS COMMUNICATION</option> <option value="72">DEPARTMENT OF ELECTRONICS ENGINEERING</option> <option value="11">DEPARTMENT OF ENGLISH</option> <option value="30">DEPARTMENT OF FOOD SCIENCE & TECHNOLOGY</option> <option value="12">DEPARTMENT OF FRENCH</option> <option value="24">DEPARTMENT OF GREEN ENERGY TECHNOLOGY</option> <option value="14">DEPARTMENT OF HINDI</option> <option value="34">DEPARTMENT OF HISTORY</option> <option value="3">DEPARTMENT OF INTERNATIONAL BUSINESS</option> <option value="32">DEPARTMENT OF LIBRARY & INFORMATION SCIENCE</option> <option value="1">DEPARTMENT OF MANAGEMENT STUDIES</option> <option value="142">DEPARTMENT OF MANAGEMENT STUDIES - ANDAMAN CAMPUS</option> <option value="5">DEPARTMENT OF MANAGEMENT STUDIES - KARAIKAL CAMPUS</option> <option value="57">DEPARTMENT OF MATHEMATICS</option> <option value="67">DEPARTMENT OF MICROBIOLOGY</option> <option value="65">DEPARTMENT OF OCEAN STUDIES AND MARINE BIOLOGY(A&N CAMPUS)</option> <option value="23">DEPARTMENT OF PERFORMING ARTS</option> <option value="16">DEPARTMENT OF PHILOSOPHY</option> <option value="15">DEPARTMENT OF PHYSICAL EDUCATION AND SPORTS</option> <option value="18">DEPARTMENT OF PHYSICS</option> <option value="55">DEPARTMENT OF POLITICS & INTERNATIONAL STUDIES</option> <option value="13">DEPARTMENT OF SANSKRIT</option> <option value="35">DEPARTMENT OF SOCIAL WORK</option> <option value="22">DEPARTMENT OF SOCIOLOGY</option> <option value="31">DEPARTMENT OF STATISTICS</option> <option value="4">DEPARTMENT OF TOURISM STUDIES</option> <option value="101">ESCANDE CHAIR IN ASIAN CHRISTIAN STUDIES</option> <option value="108">MOU SEAL PROGRAMME</option> <option value="78">SCHOOL OF EDUCATION</option> <option value="77">SCHOOL OF LAW</option> <option value="76">SCHOOL OF TAMIL</option> <option value="41">UMISARC - CENTRE FOR SOUTH ASIAN STUDIES</option>                                    
+                                    </select>
+
+               
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            
+                            <div id="div_exam_schedule" style="padding:10px;">
+                                
+                            </div>
+                        </div>
+
+                    </form>
+                    </div>
+                
+            
+              <div class="modal-footer">
+                
+               
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+            </div>
+    
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+<!-- End Bootstrap modal -->
+
+
+
+<!-- Bootstrap modal for tab control Student Information -->
+<div class="modal fade" id="modal_student_details" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h3 class="modal-title">Student Details</h3>
+            </div>
+                        <div class="form-body">
+                        <div style="text-align:center;"><strong>Please update your personal details, this form will get discard automatically after completion of required information.</strong>
+                   </div>
+            <div style="float: right">
+                 <a class="btn btn-sm btn-default" href="javascript:void(0)" onclick="reset_password_self()"><i class="glyphicon glyphicon-lock"></i> Reset Password</a>
+            </div>
+            
+                <form action="#" id="form_student_information_view" class="form-horizontal">
+                    <input type="hidden" value="" name="id"/> 
+                                         
+                   <div class="col-lg-12 col-sm-6">
+    <div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" id="student_photo_bg" src="https://www.bicpu.edu.in/sites/default/files/styles/profile_photo/public/staff_photo/male_0.png">
+        </div>
+        <div class="useravatar">
+            <img alt="" id="student_photo" src="https://www.bicpu.edu.in/sites/default/files/styles/profile_photo/public/staff_photo/male_0.png">
+        </div>
+        <div class="card-info"> <span class="card-title">Name of the Student</span>
+
+        </div>
+    </div>
+    <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+            <button type="button" id="basic_info" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+                <div class="hidden-xs">Basic Info</div>
+            </button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" id="academic_info" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                <div class="hidden-xs">Academic Info</div>
+            </button>
+        </div>		
+        <div class="btn-group" role="group">
+            <button type="button" id="additional_info" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                <div class="hidden-xs">Additional Info</div>
+            </button>
+        </div>
+                <div class="btn-group" role="group">
+            <button type="button" id="update_info" class="btn btn-default" href="#tab4" data-toggle="tab"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                <div class="hidden-xs">Update Info</div>
+            </button>
+        </div>
+            </div>
+
+        <div class="well">
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="tab1">
+          <table id="students_details_table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+              <tr>
+                  <td>Name of the Student</td> <td id="student_details_name"></td>
+              </tr>
+              <tr>
+                  <td>Register Number of the Student</td> <td id="student_details_reg_number"></td>
+              </tr>
+              <tr>
+                  <td>Library ID</td> <td id="student_details_library_no"></td>
+              </tr>
+              <tr>
+                  <td>Date of Birth (yyyy-mm-dd)</td> <td id="student_details_dob"></td>
+              </tr>
+              <tr>
+                  <td>Program of Study</td> <td id="student_details_program"></td>
+              </tr>
+              <tr>
+                  <td>Name of the Department / Centre</td> <td id="student_details_dept"></td>
+              </tr>
+              <tr>
+                  <td>Year Joined</td> <td id="student_details_year_joined"></td>
+              </tr>
+              <tr>
+                  <td>Father / Last Name</td> <td id="student_details_father_name"></td>
+              </tr>
+              <tr>
+                  <td>Contact Number</td> <td id="student_details_mobile"></td>
+              </tr>
+              <tr>
+                  <td>Institutional Email</td> <td id="student_details_pumail"></td>
+              </tr>
+              <tr>
+                  <td>Personal Email</td> <td id="student_details_email"></td>
+              </tr>
+              <tr>
+                  <td>Communication Address</td> <td id="student_details_address"></td>
+              </tr>
+              <tr>
+                  <td>State</td> <td id="student_details_state"></td>
+              </tr>
+              <tr>
+                  <td>Aadhar</td> <td id="student_details_aadhar"></td>
+              </tr>
+              
+              
+          </table>
+            
+            
+
+        </div>
+        <div class="tab-pane fade in" id="tab2">
+          
+          <div id="student_tab_information_academic_details"></div>
+        </div>		
+        <div class="tab-pane fade in" id="tab3">
+          <h5>Additional Information</h5>
+          <div id="student_tab_information_additional_details"></div>
+        </div>
+          
+                  <div class="tab-pane fade in" id="tab4">
+ 
+            
+            
+
+<!-- Bootstrap modal form for adding Student -->
+
+                <h3 class="modal-title">Student Information</h3>
+                Please verify and update your information. This form will get discard automatically once you fill up all the details shown below.
+
+            <div class="modal-body form">
+
+                    <input type="hidden" value="" name="std_info_id"/> 
+                    <div class="form-body">
+                        
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Gender</label>
+                            <div class="col-md-9">
+                                <select name="std_info_gender" class="form-control">
+                                    <option value="select">Select</option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
+                                    <option value="T">Transgender</option>
+                                </select>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                       
+
+                        <div class="form-group has-feedback">
+                            <label class="control-label col-md-3">Date of Birth (yyyy-mm-dd)</label>
+                            <div class="col-md-9">
+                                <input name="std_info_dob" placeholder="yyyy-mm-dd" class="form-control datepicker" type="text">
+                                <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Category</label>
+                            <div class="col-md-9">
+                            <select name="std_info_category" class="form-control">
+                                    <option value="select">Select</option>
+                                    <option value="GEN">GEN</option>
+                                    <option value="OBC">OBC</option>
+                                    <option value="SC">SC</option>
+                                    <option value="ST">ST</option>
+                                </select>
+                                <span class="help-block"></span>
+                                </div>
+                        </div>
+   
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Father's / Guardian's Name</label>
+                            <div class="col-md-9">
+                                <input name="std_info_father_name" placeholder="Father's / Guardian's Name" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Mother's Name</label>
+                            <div class="col-md-9">
+                                <input name="std_info_mother_name" placeholder="Mother's Name" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Mobile Number</label>
+                            <div class="col-md-9">
+                                <input name="std_info_mobile" placeholder="Mobile number" class="form-control" type="number" >
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Institutional Email</label>
+                            <div class="col-md-9">
+                                <label name="std_info_pumail"class="form-control"></label>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Personal Email</label>
+                            <div class="col-md-9">
+                                <input name="std_info_email" placeholder="email address" class="form-control" type="email">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Father's / Guardian's Mobile Number</label>
+                            <div class="col-md-9">
+                                <input name="std_info_father_mobile" placeholder="Father's Mobile number" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+						<div class="form-group ">
+                            <label class="control-label col-md-3">Father's / Guardian's Email</label>
+                            <div class="col-md-9">
+                                <input name="std_info_father_email" placeholder="fathers's email address" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Aadhar Number</label>
+                            <div class="col-md-9">
+                                <input name="std_info_aadhar" placeholder="Aadhar Number" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Parental Income</label>
+                            <div class="col-md-9">
+                                <input name="std_info_income" placeholder="Parental Income" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Library Card No.</label>
+                            <div class="col-md-9">
+                                <input name="std_info_library_no" placeholder="Library Card Number" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                         <div class="form-group ">
+                            <label class="control-label col-md-3">Address</label>
+                            <div class="col-md-9">
+                                <textarea name="std_info_address" rows="5" cols="50" placeholder="Permanent or Communication Address" class="form-control"></textarea>    
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group" id="single_girl_child">
+                                       <label class="control-label col-md-3">Are you "Single Girl Child" ?</label>
+                                        <div class="col-md-9">
+                                            <input type="radio" name="std_info_single_girl" value="Y" >Yes<br>
+                                            <input type="radio" name="std_info_single_girl" value="N" >No<br>
+                                        </div>
+                        </div>
+                         
+                         
+                        <div class="form-group">
+                                       <label class="control-label col-md-3">Are you "Hosteler" ?</label>
+                                        <div class="col-md-9">
+                                            <input type="radio" name="std_info_hosteler" value="Y" >Yes<br>
+                                            <input type="radio" name="std_info_hosteler" value="N" >No<br>
+                                        </div>
+                        </div>
+                        
+  
+                    </div>
+                
+             
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" id="btnSave" onclick="update_student_info()" class="btn btn-primary">Update</button>
+                
+            </div>
+
+
+
+<!-- End Bootstrap modal -->
+
+            
+            
+            
+        </div>  
+          
+                    
+      </div>
+    </div>
+    
+    </div>
+                        
+  
+                    </div>
+                </form>
+                
+
+                
+          
+            <div class="modal-footer">
+                
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- End Bootstrap modal -->
+
+
+
+
+
+
+
+<!-- Bootstrap modal form for changing password -->
+<div class="modal fade" id="modal_form_student_password" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h3 class="modal-title">Update Password</h3> 
+            </div>
+            <div class="modal-body form">
+                <form action="#" id="form_student_password_reset" class="form-horizontal">
+                    <input type="hidden" value="" name="std_info_id"/> 
+                    <div class="form-body">
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Current Password</label>
+                            <div class="col-md-9">
+                                <input name="std_pass_reset_old_password" placeholder="" class="form-control" type="password">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">New Password</label>
+                            <div class="col-md-9">
+                                <input name="std_pass_reset_new_password" placeholder="" class="form-control" type="password" pattern=".{8,}" title="At least 8 characters (at least one capital letter, at least one small letter and at least one number)">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Retype Password</label>
+                            <div class="col-md-9">
+                                <input name="std_pass_reset_retype_password" placeholder="" class="form-control" type="password" pattern=".{8,}" title="At least 8 characters (at least one capital letter, at least one small letter and at least one number)">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </form>
+             
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnSave" onclick="student_password_reset()" class="btn btn-primary">Update</button>
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- End Bootstrap modal -->
+<!-- Bootstrap modal form for adding Student -->
+
+
+
+
+
+<!-- Get parents Email & Mobile
+
+
+<!-- Bootstrap modal for tab control Student Information -->
+<div class="modal fade" id="modal_student_details_1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h4 class="modal-title">Student Details Update </h4>
+            </div>
+            		 <form action="#" id="form_student_information_view_1" class="form-horizontal">
+            <div class="form-body">
+                        <div style="text-align:center;"><strong><h5>Please update your Parent email id & Mobile No.</h5></strong>
+                   </div>
+			
+					<div class="form-group ">
+                            <label class="control-label col-md-3">Father's / Guardian's Email</label>
+                            <div class="col-md-7">
+                                <input name="std_info_father_email" placeholder="email address" class="form-control" type="email" id="father_email">
+                                <span class="help-block"></span>
+                            </div>
+                        </div>			
+			           
+                        
+                        <div class="form-group ">
+                            <label class="control-label col-md-3">Father's / Guardian's Mobile Number</label>
+                            <div class="col-md-7">
+                                <input name="std_info_father_mobile" placeholder="Father's Mobile number" class="form-control" type="text">
+                                <span class="help-block"></span>
+                            </div>
+						</div>	
+				
+				<div class="modal-footer">
+                     <button type="button" id="btn_Save" onclick="update_student_parent_info()" class="btn btn-primary">Update</button>
+                </div>
+			</form>   	   
+				   							
+
+<!-- end off -->
+
+
+<!-- Modal Dialog for loading content GIF -->
+<div class="modal" data-backdrop="static" data-keyboard="false" id="content_loading" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                <h4 class="modal-title">Loading...</h4>
+
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+        <p>Processing your request</p>
+        <img src="https://sms.bicpu.edu.in/assets/home/loading.gif" alt="Loading">
+        </div>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" id="modal_information">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-info">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title modal_information_title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+             <h5 class="modal_information_message"></h5>
+                    
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="modal_information-btn-close" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+              
+
+
+<script>
+    
+var save_method; //for save method string
+var _dataTable;
+
+
+var BASE_URL;
+  
+function save()
+{    
+    var url;
+    var temp;
+
+        
+    
+	
+  
+    
+    // ajax adding data to database
+    $.ajax({
+        url : url,
+        type: "POST",
+        data: temp,
+        dataType: "JSON",
+        success: function(data)
+        {
+            if(data.status) //if success close modal and reload ajax table
+            {
+                $('#modal_form_addUser').modal('hide');
+                $('#modal_form_addprogram').modal('hide');
+                $('#modal_form_addcourse').modal('hide');
+                $('#modal_form_addStudent').modal('hide');
+               
+                reload_table();
+            }
+            else
+            {
+                for (var i = 0; i < data.inputerror.length; i++) 
+                {
+                    $('[name="'+data.inputerror[i]+'"]').parent().parent().addClass('has-error'); //select parent twice to select div form-group class and add has-error class
+                    $('[name="'+data.inputerror[i]+'"]').next().text(data.error_string[i]); //select span help-block class set text error string
+                }
+            }
+            $('#btnSave').text('save'); //change button text
+            $('#btnSave').attr('disabled',false); //set button enable 
+
+
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            alert('Error adding / update data');
+            $('#btnSave').text('save'); //change button text
+            $('#btnSave').attr('disabled',false); //set button enable 
+
+        }
+    });
+    }
+
+
+
+/*
+ * 
+ * User related functions
+ * 
+ */
+
+
+
+
+
+
+function reset_password_self(){
+    $('#modal_form_student_password').modal('show');
+}
+   function student_password_reset(){
+        var post_data=$('#form_student_password_reset').serialize();
+        
+        $.ajax({
+            url : "https://sms.bicpu.edu.in/student/student_password_reset_fn",
+            type: "POST",
+            dataType: "JSON",
+            data:post_data,
+            success: function(data)
+            {
+                if(data.status){
+                alert('Updated successfully !!!');
+                $('#modal_form_student_password').modal('hide');  
+            }   
+            else
+            {
+                for (var i = 0; i < data.inputerror.length; i++) 
+                {
+                    $('[name="'+data.inputerror[i]+'"]').parent().parent().addClass('has-error'); //select parent twice to select div form-group class and add has-error class
+                    $('[name="'+data.inputerror[i]+'"]').next().text(data.error_string[i]); //select span help-block class set text error string
+                }
+            }
+                //location.reload();
+                  
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                alert('Error in updating student information');
+            }
+        });
+    }
+
+function update_student_info(){
+        var post_data=$('#form_student_information_view').serialize();
+       // alert($('[name="std_info_father_email"]').val());
+		        
+        $.ajax({
+            url : "https://sms.bicpu.edu.in/student/update_student_information_fn",
+            type: "POST",
+            dataType: "JSON",
+            data:post_data,
+            success: function(data)
+            {
+                if(data.status){
+                alert('Updated successfully !!!');
+                $('#modal_student_details').modal('hide');  
+            }   
+            else
+            {
+                for (var i = 0; i < data.inputerror.length; i++) 
+                {
+                    $('[name="'+data.inputerror[i]+'"]').parent().parent().addClass('has-error'); //select parent twice to select div form-group class and add has-error class
+                    $('[name="'+data.inputerror[i]+'"]').next().text(data.error_string[i]); //select span help-block class set text error string
+                }
+            }
+                //location.reload();
+                  
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                alert('Error in updating student information');
+            }
+        });
+        
+        
+    }
+
+function update_student_parent_info(){
+	  	var post_data=$('#form_student_information_view_1').serialize();
+		if($("#father_email").val() == "")
+		{
+			alert("Enter Father Email id");
+		}
+		else
+		{
+		        
+        $.ajax({
+            url : "https://sms.bicpu.edu.in/student/update_student_parent_info_fn",
+            type: "POST",
+            dataType: "JSON",
+            data:post_data,
+            success: function(data)
+            {
+                if(data.status){
+                alert('Updated successfully !!!');
+                $('#modal_student_details').modal('hide');  
+            }   
+            else
+            {
+                for (var i = 0; i < data.inputerror.length; i++) 
+                {
+                    $('[name="'+data.inputerror[i]+'"]').parent().parent().addClass('has-error'); //select parent twice to select div form-group class and add has-error class
+                    $('[name="'+data.inputerror[i]+'"]').next().text(data.error_string[i]); //select span help-block class set text error string
+                }
+            }
+                window.location = "https://sms.bicpu.edu.in/form/feedform_assessment";
+                  
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+                alert('Error in updating student information');
+            }
+        });
+        
+		}  
+    }
+
+
+
+
+
+function show_student_login_form(){
+    $('.staff_login_box').fadeOut('fast',function(){
+        $('.student_login_box').fadeIn('fast');
+		//$('.staff_forgot').fadeOut('fast');
+        $('.staff_footer').fadeOut('fast',function(){
+            $('.student_footer').fadeIn('fast');
+	$('.staff_forgot').fadeOut('fast');
+	$('.student_forgot').fadeOut('fast');
+        });
+        $('.student_login_admin').fadeOut('fast',function(){
+            $('.student_login').fadeIn('fast'); 
+            $('.secret').fadeOut('fast');  
+        });
+        $('.modal-title').html('Student Login');
+    }); 
+    $('.error').removeClass('alert alert-danger').html('');
+       
+}
+
+function show_password_forgot_form(){
+	$('.staff_login_box').fadeOut('fast',function(){
+        $('.staff_forgot').fadeIn('fast');
+        $('.staff_footer').fadeOut('fast',function(){
+           // $('.student_footer').fadeIn('fast');
+        });
+        $('.modal-title').html('Forgot Password');
+    }); 
+    $('.error').removeClass('alert alert-danger').html('');
+}
+
+function show_password_forgot_form_student(){
+	$('.student_login_box').fadeOut('fast',function(){
+        $('.student_forgot').fadeIn('fast');
+        $('.student_footer').fadeOut('fast',function(){
+           // $('.staff_footer').fadeIn('fast');
+        });
+        $('.modal-title').html('Forgot Password');
+    }); 
+    $('.error').removeClass('alert alert-danger').html('');
+}
+
+function show_staff_login_form(){
+    $('#login_modal .student_login_box').fadeOut('fast',function(){
+    $('#login_modal .staff_forgot').fadeOut('fast');
+        $('.staff_login_box').fadeIn('fast');
+        $('.student_footer').fadeOut('fast',function(){
+            $('.staff_footer').fadeIn('fast');    
+        });
+        
+        $('.modal-title').html('Login');
+    });       
+     $('.error').removeClass('alert alert-danger').html(''); 
+}
+
+function open_staff_login(){
+    show_staff_login_form();   
+    
+    setTimeout(function(){
+        $('#login_modal').modal('show');    
+    }, 230);
+    
+}
+
+function open_student_login(){
+    show_student_login_form();
+    setTimeout(function(){
+        $('#login_modal').modal('show');    
+    }, 230);
+    
+}
+
+function open_student_login_admin(){
+
+      $('.staff_login_box').fadeOut('fast',function(){
+        $('.student_login_box').fadeIn('fast');
+	//$('.staff_forgot').fadeOut('fast');
+        $('.staff_footer').fadeOut('fast',function(){
+            $('.student_footer').fadeIn('fast');
+	$('.staff_forgot').fadeOut('fast');
+        });
+        $('.student_login').fadeOut('fast',function(){
+            $('.student_login_admin').fadeIn('fast'); 
+            $('.secret').fadeIn('fast');  
+        });
+        $('.modal-title').html('Student Login');
+    }); 
+    $('.error').removeClass('alert alert-danger').html('');
+    setTimeout(function(){
+        $('#login_modal').modal('show');    
+    }, 230);
+}
+
+
+//function ajax_process_staff_login(){
+$('#user_login_form').submit(function( event ) {
+    event.preventDefault();
+var username=$('#txt_username').val();
+var password=$('#txt_password').val();
+if(username =='' && password ==''){
+    shake_modal('Enter Username / User ID & Password'); 
+}
+else if(username ==''){
+    shake_modal('Enter Username / User ID'); 
+}
+else if(password==''){
+    shake_modal('Enter Password');
+}
+else{
+
+    $.post( "https://sms.bicpu.edu.in/member/user_login_fn",{username:username,password:password}, function( data) {
+            if(data==1){
+                window.location.replace("https://sms.bicpu.edu.in/member/home");    
+            } else {
+                 shake_modal('Check your credential'); 
+            }
+        });
+}
+});      
+//}
+
+function ajax_process_forgot(){
+    $('input[name="btn_send_password"]').attr('disabled','disabled');
+	var mbl=$('#mobile').val();
+    $.post( "https://sms.bicpu.edu.in/member/user_forgot_pwd_fn",{username:$('#mobile_username').val(),mobile:$('#mobile').val()}, function( data) {
+            if(data==1){
+                //alert (data);
+                //window.location.replace(BASE_URL+"member/home");    
+		alert('Password is sent to your registered mail id: '+mbl);
+		show_staff_login_form();
+            } else {
+                //alert (data);
+                 shake_modal('Check your credential'); 
+            }
+        });
+    
+/*   Simulate error message from the server   */
+     //shakeModal();
+     
+}
+function ajax_process_forgot_student(){
+    $('input[name="btn_send_password"]').attr('disabled','disabled');
+	var mbl=$('#student_mobile').val();
+    $.post( "https://sms.bicpu.edu.in/student/user_forgot_pwd_fn",{username:$('#student_username').val(),mobile:$('#student_mobile').val()}, function( data) {
+            if(data.status){
+                //alert (data);
+                //window.location.replace(BASE_URL+"member/home");    
+
+		alert('The password is sent to your registered mobile ******'+data.mobile.substring(6,10));
+
+		show_student_login_form();
+            } else {
+                //alert (data);
+                 shake_modal('Check your credential'); 
+            }
+        });
+    
+/*   Simulate error message from the server   */
+     //shakeModal();
+     
+}
+
+//function ajax_process_student_login(){
+$('#student_login_form').submit(function( event ) {
+	event.preventDefault();
+    $.post( "https://sms.bicpu.edu.in/student/student_login_fn",{reg_number:$('#reg_number').val(),password:$('#reg_password').val()}, function( data ) {
+            if(data == 1){
+                window.location.replace("https://sms.bicpu.edu.in/student/home");    
+            } else {
+                  shake_modal(data); 
+            }
+        });
+    
+/*   Simulate error message from the server   */
+     //shakeModal();
+     
+//}
+});
+
+function ajax_process_student_login_admin(){
+    $.post( "https://sms.bicpu.edu.in/student/student_login_fn",{reg_number:$('#reg_number').val(),password:$('#reg_password').val(),secret:$('#reg_secret').val()}, function( data ) {
+            if(data == 1){
+                window.location.replace(BASE_URL+"student/home");    
+            } else {
+                  shake_modal(data); 
+            }
+        });
+}
+
+function shake_modal(data){
+    $('#login_modal .modal-dialog').addClass('shake');
+             //$('.error').addClass('alert alert-danger').html("Invalid username/password combination");
+             $('.error').addClass('alert alert-danger').html(data);
+             $('input[type="password"]').val('');
+             setTimeout( function(){ 
+                $('#login_modal .modal-dialog').removeClass('shake'); 
+    }, 1000 ); 
+}
+
+   
+   
+
+
+
+function add_view_time_table(dept_id){
+    
+    $('#select_dept_timetable').val(dept_id);
+    $('[name="input_time_table_dept_id"]').val(dept_id);
+
+    $.ajax({
+        url : "https://sms.bicpu.edu.in/program/get_timetable",
+        type: "POST",
+        dataType: "JSON",
+        data:{dept_id: dept_id},
+        success: function(data)
+        {
+         //alert('hello');
+         if(data.result){
+            $('#div_timetable').html(data.timetable);
+        }
+        else{
+            alert('No timetable added yet');
+        }
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            //alert('Error get data from database');
+        }
+    });
+    
+    $('#modal_view_time_table').modal('show');
+    
+}
+
+function add_view_exam_schedule(dept_id){
+    
+    $('#select_dept_exam_schedule').val(dept_id);
+    $('[name="input_exam_schedule_dept_id"]').val(dept_id);
+    
+    $.ajax({
+        url : "https://sms.bicpu.edu.in/program/get_exam_schedule",
+        type: "POST",
+        dataType: "JSON",
+        data:{dept_id: dept_id},
+        success: function(data)
+        {
+         //alert('hello');
+         if(data.result){
+            $('#div_exam_schedule').html(data.exam_schedule);
+        }
+        else{
+            alert('No exam schedule added yet');
+        }
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            //alert('Error get data from database');
+        }
+    });
+    
+    $('#modal_view_exam_schedule').modal('show');
+    
+}
+
+
+
+ 
+ 
+ 
+var save_method; //for save method string
+var _dataTable;
+
+var BASE_URL;
+
+
+
+$(document).ready(function() {
+    
+  
+
+	//Scroll to top
+	$(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+
+    //set input/textarea/select event when change value, remove class error and remove text help block 
+    $("input").change(function(){
+        $(this).parent().parent().removeClass('has-error');
+        $(this).next().empty();
+    });
+    $("textarea").change(function(){
+        $(this).parent().parent().removeClass('has-error');
+        $(this).next().empty();
+    });
+    $("select").change(function(){
+        $(this).parent().parent().removeClass('has-error');
+        $(this).next().empty();
+    });
+    
+
+    
+    /*
+* 
+* 
+ */
+
+ 
+$('#menu-toggle').click(function(){
+
+if($('#menu').hasClass('open')){
+$('#menu').removeClass('open');
+$('#menu-toggle').removeClass('open');
+$('#content-right').removeClass('content-right-moved');
+$('#content-right').addClass('content-right-normal');
+}else{
+$('#menu').addClass('open');
+$('#menu-toggle').addClass('open');
+$('#content-right').removeClass('content-right-normal');
+$('#content-right').addClass('content-right-moved');
+}
+
+});
+
+  
+//Document ready closes
+
+$('#select_dept_timetable').change(function() {
+    add_view_time_table($(this).val());
+    
+});
+$('#select_dept_exam_schedule').change(function() {
+    add_view_exam_schedule($(this).val());
+    
+});
+  
+
+
+    $('.datepicker').datepicker({
+        autoclose: true,
+        format: "yyyy-mm-dd",
+        todayHighlight: true,
+        orientation: "top auto",
+        todayBtn: true,
+    });
+
+
+});
+
+  
+  
+           
+function view_student_details(id)
+{
+    $('.form-group').removeClass('has-error'); // clear error class
+    $('.help-block').empty(); // clear error string
+var flag;
+    //Ajax Load data from ajax
+    $.ajax({
+        url:"https://sms.bicpu.edu.in/student/get_student_information_tab_fn/",
+        type: "POST",
+        dataType: "JSON",
+        data:{'id':id},
+        success: function(data)
+        {
+
+            $('[name="id"]').val(data.id);
+            $('[name="student_id"]').val(data.id);
+            
+            $(".card-title").html(data.name);
+
+            $("#student_photo").attr("src", "https://sms.bicpu.edu.in/"+data.photo);
+            $("#student_photo_bg").attr("src", "https://sms.bicpu.edu.in/"+data.photo);
+
+            $("#student_details_name").html(data.name);
+            $("#student_details_reg_number").html(data.reg_number);
+                        $("#student_details_library_no").html(data.library_no ); 
+            $("#student_details_aadhar").html(data.aadhar);
+            $("#student_photo_uploader").hide();
+            
+                        $("#student_details_dob").html(data.dob);
+            $("#student_details_program").html(data.program_id);
+            $("#student_details_dept").html(data.dept_id);
+            $("#student_details_year_joined").html(data.year_joined);
+            $("#student_details_father_name").html(data.father_name);
+            $("#student_details_mobile").html(data.mobile);
+            $("#student_details_pumail").html(data.pumail);
+            $("#student_details_email").html(data.email);
+            $("#student_details_address").html(data.address);
+            $("#student_details_state").html(data.state);
+            
+            $('[name="std_info_id"]').val(data.id);
+            $('[name="std_info_gender"]').val(data.gender);
+            $('[name="std_info_dob"]').datepicker('update',data.dob);
+            $('[name="std_info_category"]').val(data.category);
+            $('[name="std_info_father_name"]').val(data.father_name);
+            $('[name="std_info_mother_name"]').val(data.mother_name);
+            $('[name="std_info_mobile"]').val(data.mobile);
+            $('[name="std_info_email"]').val(data.email);
+            $('[name="std_info_pumail"]').html(data.pumail);
+            $('[name="std_info_father_mobile"]').val(data.father_mobile);
+			$('[name="std_info_father_email"]').val(data.father_email);
+            $('[name="std_info_aadhar"]').val(data.aadhar);
+            $('[name="std_info_income"]').val(data.income);
+            $('[name="std_info_library_no"]').val(data.library_no);
+            $('[name="std_info_address"]').val(data.address);
+
+            
+            if(data.single_girl!='' || data.single_girl != null){
+            $(':radio[name="std_info_single_girl"][value="'+data.single_girl+'"]').prop('checked', true);
+             }
+             if(data.disability){
+            $(':radio[name="std_info_disability"][value="'+data.disability+'"]').prop('checked', true);
+             }
+             if(data.hosteler){
+            $(':radio[name="std_info_hosteler"][value="'+data.hosteler+'"]').prop('checked', true);
+             }
+
+             if(data.gender=='M'){
+                 $('#single_girl_child').attr('hidden', 'true');
+             }
+             else{
+                 if(data.single_girl==""){
+                    flag=1;
+                 }
+             }
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            //alert('Error get data from ajax');
+        }
+    });
+    
+    
+    //student_tab_information_academic_details
+     $.ajax({
+        url:"https://sms.bicpu.edu.in/student/get_student_passed_courses_tab_fn/",
+        type: "POST",
+        dataType: "JSON",
+        data:{'id':id},
+        success: function(data)
+        {
+           $("#student_tab_information_academic_details").html(data.passed_courses); 
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            //alert('Error get data from ajax');
+        }
+    });
+    
+    //student_tab_information_academic_details
+     $.ajax({
+        url:"https://sms.bicpu.edu.in/student/get_student_additional_info_tab_fn/",
+        type: "POST",
+        dataType: "JSON",
+        data:{'id':id},
+        success: function(data)
+        {
+           $("#student_tab_information_additional_details").html(data.additional_info); 
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+            //alert('Error get data from ajax');
+        }
+    });    
+    $('#modal_student_details').modal('show'); // show bootstrap modal when complete loaded
+ 
+}
+
+function view_student_details_1(id)
+{
+  var flag;
+    //Ajax Load data from ajax
+    $.ajax({
+        url:"https://sms.bicpu.edu.in/student/get_student_information_tab_fn/",
+        type: "POST",
+        dataType: "JSON",
+        data:{'id':id},
+        success: function(data)
+        {
+
+            $('[name="id"]').val(data.id);
+            $('[name="student_id"]').val(data.id);
+            
+            $('[name="std_info_father_email"]').val(data.father_email);
+            $('[name="std_info_father_mobile"]').val(data.father_mobile);
+		},
+    error: function (jqXHR, textStatus, errorThrown)
+        {
+            //alert('Error get data from ajax');
+        }
+    });    
+    $('#modal_student_details_1').modal('show'); // show bootstrap modal when complete loaded
+ }
+
+
+
+  
+    
+function show_modal_information(message_id){
+
+var messages=[
+    {},
+    {'title':'Course Registration / Drop','message':'Examination Fee is paid. Course Add or Drop can not be made after fee payment'},
+    {'title':'Save Recent Changes','message':'Some of your mark update(s) is/are not saved. Please save changes before proceeding.'},
+    {'title':'Generate Grade','message':'Please generate grade before before proceeding with finalizing grades.'},
+    {'title':'Saved','message':'Your changes successfully saved'},
+    {'title':'Grade Generation','message':'Successfully Grades are generated'},
+    {'title':'Generate Verification','message':'Grade verification completed'},
+    {'title':'Generate Submission','message':'Grades submitted'},
+    {'title':'IQACs Teachers Evaluation Submission','message':'Please fill Score for all Questions, and then click Submit.'},
+    {'title':'Course Registration / Drop','message':'Verifications of Course Registration is already done. Course Add or Drop can not be made after verification.'},
+    {'title':'Course Registration / Drop','message':'Last date for Course Registration is over. Course Add or Drop can not be made after last date.'},
+    ];
+
+$('.modal_information_title').text(messages[message_id].title);
+$(".modal_information_message").text(messages[message_id].message);
+
+$('#modal_information').modal('show');
+
+}
+//modal-btn-close
+
+$('#modal_information').on('hidden.bs.modal', function(e) {
+  //window.location.reload();                    
+});
+
+    
+    function show_message(title,message){
+
+$('.modal_information_title').text(title);
+$(".modal_information_message").text(message);
+
+$('#modal_information').modal('show');
+
+$('#modal_information').on('hidden.bs.modal', function(e) {
+  location.reload();                    
+});
+
+}
+
+   </script>     
+   
+<script type="text/javascript">
+    BASE_URL = "https://sms.bicpu.edu.in/";
+//Script for Disabling right click
+/*
+$(document).ready(function(){
+$(document).bind("contextmenu",function(e){
+   return false;
+ });
+});
+*/
+
+//Font Size Increase / Decrease
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('body').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('body').css("font-size", size);
+            });
+        });
+        
+   </script>
+   
+
+    
+</body>
+</html>
