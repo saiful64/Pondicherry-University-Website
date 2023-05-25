@@ -5,13 +5,13 @@ This README file outlines the steps to change the entire *UI of Pondicherry Univ
 
 ## Overview 👣
 
-*Conduct a thorough analysis of the current website to identify areas that need improvement.
-*Create a new design that is modern, visually appealing, and easy to navigate.
-*Develop a prototype of the new design and test it with users to ensure that it meets their needs and expectations.
-*Implement the new design using the latest web development technologies and best practices.
-*Add new features that will enhance the user experience, such as a search function, a mobile-friendly layout, and social media integration.
-*Test the new website thoroughly to ensure that it is bug-free and performs well on different devices and browsers.
-*Launch the new website and promote it to users to increase engagement and usage.
+* Conduct a thorough analysis of the current website to identify areas that need improvement.
+* Create a new design that is modern, visually appealing, and easy to navigate.
+* Develop a prototype of the new design and test it with users to ensure that it meets their needs and expectations.
+* Implement the new design using the latest web development technologies and best practices.
+* Add new features that will enhance the user experience, such as a search function, a mobile-friendly layout, and social media integration.
+* Test the new website thoroughly to ensure that it is bug-free and performs well on different devices and browsers.
+* Launch the new website and promote it to users to increase engagement and usage.
 
 
 ## Resources 📝
