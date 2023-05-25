@@ -1,9 +1,9 @@
-**#Introduction** 🌼
+# Introduction 🌼
 
 This README file outlines the steps to change the entire *UI of Pondicherry University* and add new features. The goal is to improve the user experience and make the website more efficient and user-friendly.
 
 
-**##Steps **👣
+## Overview 👣
 
 *Conduct a thorough analysis of the current website to identify areas that need improvement.
 *Create a new design that is modern, visually appealing, and easy to navigate.
@@ -14,7 +14,7 @@ This README file outlines the steps to change the entire *UI of Pondicherry Univ
 *Launch the new website and promote it to users to increase engagement and usage.
 
 
-**##Resources **📝
+## Resources 📝
 
 Prospectus 2021 - 22 - Pondicherry University: This document provides information about the salient features of Pondicherry University, including the requirement of users from initial design.
 
@@ -24,7 +24,7 @@ PONDICHERRY UNIVERSITY: This document provides complete details regarding specif
 Improve Mobile Layout - ReadMe Product Portal | Product Roadmap: This resource provides information about improving the mobile layout of documentation to make it look great no matter where the user is viewing it.
 
 
-**##Conclusion **🎀
+## Conclusion 🎀
 
 By following these steps and utilizing the resources provided, we can change the entire UI of Pondicherry University and add new features that will improve the user experience and make the website more efficient and user-friendly. This will help the university to attract more users and provide them with a better online experience.
 
